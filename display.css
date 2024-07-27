@@ -1,0 +1,247 @@
+/* Color Palette */
+:root {
+    --primary-color: #223847;
+    --secondary-color: #98a9ab;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Montserrat Medium', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px; /* added font-size for responsive design */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary-color);
+    padding: 1em; /* changed to em for responsive design */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    display: flex; /* added to make logo and header text inline */
+    align-items: center; /* added to vertically center logo and header text */
+    justify-content: space-between; /* added to make logo and header text take up full width */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem; 
+      /* changed to em for responsive design */
+     flex: 1; /*added to make header text take up available space  */
+  }
+  
+  header img.logo {
+    width: 75px; /* set a fixed width for the logo */
+    height: auto;
+    margin-right: 10px; /* added to add some space between logo and header text */
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: var(--secondary-color);
+    padding: 0.5em; /* changed to em for responsive design */
+    margin-right: -20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.5em; /* changed to em for responsive design */
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: #ffa200;
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 1em; /* changed to em for responsive design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* added for responsive design */
+  }
+  
+  .left-column {
+    width: 60%;
+    flex-basis: 60%; /* added for responsive design */
+  }
+  
+  .right-column {
+    width: 30%;
+    flex-basis: 30%; /* added for responsive design */
+  }
+  
+  /* Image Styles */
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-container .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0.5em; /* changed to em for responsive design */
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .image-container .arrow-left {
+    left: 0.5em; /* changed to em for responsive design */
+  }
+  
+  .image-container .arrow-right {
+    right: 0.5em; /* changed to em for responsive design */
+  }
+  
+  /* Section Title Styles */
+  .section-title {
+    font-size: 1.5em; /* changed to em for responsive design */
+    font-weight: bold;
+  }
+
+
+  @media screen and (max-width: 811px){
+
+    header img.logo {
+        width: 80px; /* set a fixed width for the logo */
+        /* height: 60px ; */
+        margin-right: 10px;
+        max-width: 100px;
+      }
+
+      header{
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      header h1 {
+        width: 100px;
+        font-size: 1.75px; 
+        letter-spacing: 10px;
+        padding: 5px 6px 0 ;
+        /* margin-top: 2px; */
+      }
+
+
+    
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 768px) {
+    header {
+        display: flex;
+      flex-direction: column; /* changed to column layout on smaller screens */
+    }
+    header h1 {
+      font-size: 1.5em; /* reduced font size on smaller screens */
+    }
+    header img.logo {
+      width: 80px; /* reduced logo size on smaller screens */
+    }
+    .container {
+      flex-direction: column;
+    }
+    .left-column, .right-column {
+      width: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+
+  @media screen and (max-width: 690px){
+
+    header img.logo {
+        width: 90px; /* set a fixed width for the logo */
+        /* height: 60px ; */
+        margin-right: 10px;
+        max-width: 100px;
+      }
+
+      header{
+
+        width: 100%;
+     display: flex;
+        flex-direction: column;
+
+      }
+
+      header h1 {
+        width: 100px;
+        font-size: 10.75px; 
+        letter-spacing: 10px;
+        padding: 5px 6px 0 ;
+        /* margin-top: 2px; */
+      }
+
+
+    
+  }
+  
+  @media screen and (max-width: 480px){
+
+    header img.logo {
+        width: 80px; /* set a fixed width for the logo */
+        /* height: 60px ; */
+        margin-right: 10px;
+        max-width: 100px;
+      }
+
+      header{
+
+        width: 100%;
+
+        
+
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      header h1 {
+        width: 100px;
+        font-size: 20px; 
+        letter-spacing: 10px;
+        padding: 5px 6px 0 ;
+        /* margin-top: 2px; */
+      }
+
+
+    
+  }

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Induction Program 2024 - IIT Kharagpur</title>
+    <style>
+        /* Color Palette */
+        :root {
+            --primary-color: #223847;
+            --secondary-color: #98a9ab;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Montserrat Medium', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header img.logo {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 95px;
+            height: auto;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ffa200;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .left-column {
+            width: 60%;
+        }
+
+        .right-column {
+            width: 30%;
+        }
+
+        /* Image Styles */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .image-container .arrow-left {
+            left: 10px;
+        }
+
+        .image-container .arrow-right {
+            right: 10px;
+        }
+
+        /* Section Title Styles */
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Announcement Styles */
+        .announcement {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .announcement h3 {
+            margin-top: 0;
+        }
+
+        /* Video Link Styles */
+        .video-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-links a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease;
+        }
+
+        .video-links a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .video-links i {
+            margin-right: 10px;
+        }
+
+        /* Other Link Styles */
+        .other-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .other-links a {
+            display: block;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease;
+        }
+
+        .other-links a:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Quick Link Styles */
+        .quick-links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quick-links a {
+            display: block;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s ease;
+        }
+
+        .quick-links a:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Social Link Styles */
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+        }
+
+        .social-links i {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+
+        @media  screen and (max-width: 480px){
+
+header img.logo {
+    width: 20px; /* set a fixed width for the logo */
+    height: 20px;
+    margin-right: 10px; /* added to add some space between logo and header text */
+  }
+
+  header img.logo{
+
+    width: 20px;
+    height: 20px;
+
+
+  }
+
+
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="letter-spacing: 3px;">INDUCTION PROGRAM 2024</h1>
+        <h2 style="letter-spacing: 3px;">IIT KHARAGPUR</h2>
+        <img src="iit_logo.png" alt="IIT Kharagpur Logo" class="logo">
+        <link rel="stylesheet" href="display.css">
+    </header>
+
+    <nav>
+        <a href="/index.html">HOME</a>
+        <a href="/contact.html" id="contact-link">CONTACT DETAILS</a>
+        <!-- <a href="/3d map.html" id="contact-link">3D MAP</a> -->
+    </nav>
+    <br>
+
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    Freshers must report to Netaji Auditorium by 8:00 AM on 30th July 2024 for the Welcome Ceremony.
+                </marquee>
+
+    <main>
+        <div class="container">
+            <div class="left-column">
+                <div class="image-container">
+                    <img src="kgp_slider1.png" alt="Image 1">
+                    <img src="kgp_slider2.png" alt="Image 2">
+                    <img src="kgp_slider3.png" alt="Image 3">
+                    <img src="kgp_slider3.png" alt="Image 4">
+
+                    
+                    
+                    <div class="arrow arrow-left" onclick="previousImage()">&lt;</div>
+                    <div class="arrow arrow-right" onclick="nextImage()">&gt;</div>
+                </div>
+
+                <h2 class="section-title">About Induction Program</h2>
+                <p>Dear Students,</p>
+                <p>Warm greetings from the Induction program team at IIT Kharagpur! In this brief write up we wish to give you an overview of the Induction program that has been designed for you.</p>
+                <p>Why Induction Program? Most universities and colleges around the world have Induction or Orientation programs that range from anything from one day to one month for the new students. During this period, students participate in a wide range of social activities, sports challenges, and life skills programs. The Induction program at IIT Kharagpur aims to fulfill the following needs that you may have: <a href="more.html">>>More</a></p>
+
+                <h3 class="section-title">Announcements</h3>
+                <ul class="announcement">
+                    <li><h3>Induction Handbook</h3></li>
+                    <li><h3>Induction Master Timetable</h3></li>
+                    <li><h3>Department wise Registration Counters</h3></li>
+                    <li><h3>Order of Documents</h3></li>
+                </ul>
+
+                <h3 class="section-title">Important Notice</h3>
+              <p>
+                Freshers must report to Netaji Auditorium by 9:00 AM on 30th July 2024 for the Welcome Ceremony.
+              </p>
+                    
+                
+
+                <h3 class="section-title">Find us on</h3>
+                <div class="social-links">
+                    <li><a href="https://www.facebook.com/IITKgp">Facebook</a></li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <h3 class="section-title">Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Induction Handbook</a></li>
+                    <li><a href="https://drive.google.com/file/d/1yQm_qBbQL0GLqf5rq5UNi7PVEoOGn-HV/view?usp=sharing">Induction Master Timetable</a></li>
+                    <li><a href="https://drive.google.com/file/d/1i99KPuVPgCZx-Fhwknb-cqp7KWLkQvH5/view?usp=sharing">Bus Schedule</a></li>
+                    <li><a href="#">Department Wise Registration Counters</a></li>
+                    <li><a href="https://drive.google.com/file/d/1VV4fPxUKyzkfn88cUs8h6nuDOf0MBuVa/view?usp=sharing">IITKGP map</a></li>
+                 
+                    
+                </ul>
+
+                <h3 class="section-title">Video Links</h3>
+                <ul class="video-links">
+                    <li><a href="https://www.youtube.com/watch?v=iZf1QdDA270&feature=youtu.be"><i class="fab fa-youtube"></i> IIT KGP - The Avenue of Excellence</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=VKzSyQzyTXg"><i class="fab fa-youtube"></i> Visit IIT Kharagpur</a></li>
+                   
+                </ul>
+
+                <h3 class="section-title">Other Relevant Links</h3>
+                <ul class="other-links">
+                    <li><a href="https://www.iitkgp.ac.in/">IIT Kharagpur Website</a></li>
+                    <li><a href="https://erp.iitkgp.ac.in/">ERP</a></li>
+                    <li><a href="https://gymkhana.iitkgp.ac.in/"><i class="fab fa-youtube"></i>Technology Students' Gymkhana</a></li>
+                    <li><a href="http://www.counsellingcentre.iitkgp.ac.in/">Counselling Center</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let imageIndex = 0;
+        let images = document.querySelectorAll('.image-container img');
+
+        function previousImage() {
+            imageIndex--;
+            if (imageIndex < 0) {
+                imageIndex = images.length - 1;
+            }
+            updateImage();
+        }
+
+        function nextImage() {
+            imageIndex++;
+            if (imageIndex >= images.length) {
+                imageIndex = 0;
+            }
+            updateImage();
+        }
+
+        function updateImage() {
+            images.forEach((image) => {
+                image.style.display = 'none';
+            });
+            images[imageIndex].style.display = 'block';
+        }
+    </script>
+
+      </main>
+        <footer>
+            <br>
+            <p>&copy; 2024 Induction Program IIT Kharagpur</p>
+        </footer>
+</body>
+</html>
